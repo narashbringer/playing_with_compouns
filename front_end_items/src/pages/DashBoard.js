@@ -56,9 +56,10 @@ const Dashboard = () => {
             <tbody>
                     {listOfesults.map(listitem => (
                         <tr key={listitem.name}>    
-                            <th>{listitem.name}</th>
-                            <th>{listitem.type}</th>
-                            <th>{listitem.can_be_sold_in.value}</th>
+                            <td>{listitem.name}</td>
+                            {listitem.vegan ? <td>yes</td>:<td>no</td>}
+                            {listitem.non_comedogenic ? <td>yes</td>:<td>no</td>}
+                            {listitem.can_be_sold_in_china ? <td>yes</td>:<td>no</td>}
                         </tr>                      
                     ))}
             </tbody>
