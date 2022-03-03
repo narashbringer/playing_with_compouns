@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'rest_auth.registration', 
     'corsheaders', 
     # Local Apps
-    'users', 
+    'users',
+    'ingredients',
 ]
 
 MIDDLEWARE = [
