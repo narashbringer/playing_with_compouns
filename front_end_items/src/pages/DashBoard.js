@@ -1,5 +1,8 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import AddObject from '../components/AddForm';
+
 const Dashboard = () => {
   const [userEmail, setUserEmail] = useState('');
   const [loading, setLoading] = useState(true);
@@ -44,12 +47,13 @@ const Dashboard = () => {
     <div>
       {loading === false && (
         <Fragment>
-          <Table striped bordered hover>
+            <AddObject/>
+            <Table striped bordered hover>
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>vegan</th>
-                    <th>non-comedogenic</th>
+                    <th>Product</th>
+                    <th>Vegan</th>
+                    <th>Non-comedogenic</th>
                     <th>China</th>
                 </tr>
             </thead>
